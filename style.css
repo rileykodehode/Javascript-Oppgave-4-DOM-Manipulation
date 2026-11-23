@@ -1,0 +1,84 @@
+:root {
+  --Midnight-Violet: #190b28;
+  --Taupe-Grey: #685762;
+  --Blue-Bell: #20a4f3;
+  --Cherry-Blossom: #efa9ae;
+  --Blush-Rose: #e55381;
+  --White: #ffffff;
+  --Black: #000000;
+
+  --small-text: 1rem;
+  --medium-text: 1.3rem;
+  --big-text: 2rem;
+}
+
+/* CSS Reset */
+* {
+  @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Text Sizes */
+h1 {
+  font-size: var(--big-text);
+}
+
+h2,
+h3 {
+  font-size: var(--medium-text);
+}
+
+p,
+h4 {
+  font-size: var(--small-text);
+  margin: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* General Colors */
+body {
+  background-color: var(--Cherry-Blossom);
+  color: var(--Midnight-Violet);
+}
+
+/* General Sizing */
+header,
+main,
+footer {
+  padding: 20px 10px;
+}
+
+header {
+  background-color: var(--Taupe-Grey);
+  color: var(--White);
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  letter-spacing: 1px;
+  background-color: var(--Midnight-Violet);
+  color: var(--White);
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+div {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: var(--Midnight-Violet);
+  color: var(--White);
+  width: 60%;
+}
+
+li {
+  margin: 10px;
+}
