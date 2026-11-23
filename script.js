@@ -18,7 +18,7 @@ const gameArray = [
     img: "Images/tf2teamshotlogo.png",
     alt: "A cover image of Team Fortress 2, with it's full title and style. Every mercenary displayed with Heavy on the foreground.",
     description:
-      "Team Fortress 2 is a first person class shooter. Released by Valve in October that year.",
+      "Team Fortress 2 is a first person class shooter. Released by Valve in October that year. Pick out of a class 9 different mercinaries, all with incredibly unique gameplay! In this multiplayer class shooter, you work with your team to beat the objective together against the opposite team of the same classes. The game is chaotic, satisfying and enjoyable to anyone in any skill level. This game is a classic for a VERY good reason!",
   },
   {
     title: "Killing Floor 2",
@@ -50,6 +50,16 @@ const gameArray = [
       "A bit of a wildcard. This game hasn't been released but is in invite beta. Which means if you know someone who already plays this game, you can ask them give you an invite into the game! It's an exciting new IP that Valve is developing and so far the reviews of the game have been positive. My knowledge of this game is basically nothing. However, it seems like a great shout.",
   },
 ];
+
+// Template til ei spel som kan leggast inni arrayen
+/* title: " ",
+ year: " ",
+ multiplayer: " ",
+ genre: " ",
+ img: " ",
+ alt: " ",
+ description: " ",
+ */
 
 // Debugging
 console.log(gameArray[0].img);

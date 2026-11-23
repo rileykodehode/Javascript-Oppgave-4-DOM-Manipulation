@@ -46,12 +46,6 @@ body {
   color: var(--Midnight-Violet);
 }
 
-section {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
 /* General Sizing */
 header,
 main,
@@ -87,6 +81,11 @@ div {
   width: 400px;
 }
 
+#randomizer-section {
+  display: grid;
+  grid-template-columns: auto;
+}
+
 .game-thumbnail {
   display: flex;
   flex-flow: column;
@@ -104,4 +103,9 @@ div {
 
 li {
   margin: 10px;
+}
+
+footer {
+  border-top: solid 3px var(--Midnight-Violet);
+  background-color: var(--White);
 }
