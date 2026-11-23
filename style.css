@@ -8,8 +8,10 @@
   --Black: #000000;
 
   --small-text: 1rem;
-  --medium-text: 1.3rem;
+  --medium-text: 1.5rem;
   --big-text: 2rem;
+
+  --cartoon-shadow: 10px 10px #000000;
 }
 
 /* CSS Reset */
@@ -44,6 +46,12 @@ body {
   color: var(--Midnight-Violet);
 }
 
+section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 /* General Sizing */
 header,
 main,
@@ -76,7 +84,22 @@ div {
   border-radius: 8px;
   background-color: var(--Midnight-Violet);
   color: var(--White);
-  width: 60%;
+  width: 400px;
+}
+
+.game-thumbnail {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: var(--cartoon-shadow);
+}
+
+.game-description {
+  margin: 20px 0;
 }
 
 li {
