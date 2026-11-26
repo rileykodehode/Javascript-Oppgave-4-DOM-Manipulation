@@ -3,10 +3,11 @@ const makeDark = (element) => {
   element.style.backgroundColor = "var(--Midnight-Violet";
 };
 
+const appendedGames = [];
 // Variable to gather the h2 from the HTML
 const titleDefaultString = document.querySelector(".title");
-// Variable the makes the game card, gathering the div and making it dynamic.
-const gameCard = document.querySelector("#game-card");
+// Variable gathering the div and making it dynamic.
+const gameCard = document.querySelector(".game-card");
 
 // Array til alle spelane!
 const gameArray = [
@@ -27,7 +28,8 @@ const gameArray = [
     genre: "Zombie Wave Survival Campaign Shooter",
     img: "Images/killingfloor2.png",
     alt: "A survivor in a gas mask, equipped with a gun surrounded by zombies.",
-    description: "A very fun multiplayer wave zombie shooter!",
+    description:
+      "A very fun multiplayer wave zombie shooter! Survive with your mates in this extremely british humored game, seriously a lot of the jokes have a very distinct british humor and lines. Just excellent, because the characters in this game love the share witty lines. While that's happening you are constantly fighting for your life! The game gets intense and gaining survival and combat skills is vital.",
   },
   {
     title: "The Sims 2",
@@ -37,7 +39,7 @@ const gameArray = [
     img: "Images/sims2.png",
     alt: "Multiple Sims posed in various poses and action on a blue background.",
     description:
-      "A life simulator, this is an much older iteration of the franchise. However, it's by far my favourite! The game is most immersive out of the all the releases as the game was developed with an incredible passion. It manages to warm your heart, make you laugh out loud or shiver your timbers! Which are incredible ranges of experiences and what The Sims 2 does amazing.",
+      "A life simulator, this is an much older iteration of the franchise. However, it's by far my favourite! The game is most immersive out of the all the releases as the game was developed with an incredible passion. It manages to warm your heart, make you laugh out loud or shiver your timbers! Which are incredible ranges of experiences and what The Sims 2 does amazingly.",
   },
   {
     title: "Deadlock",
@@ -65,23 +67,21 @@ const gameArray = [
 console.log(gameArray[0].img);
 console.log(gameArray[0].description);
 
-// Funksjon W.I.P. til å lage beskrivelsen i kortet
-const gameDescriptionInCard = document.createElement("p");
-
-// Loop start
-for (let i = 0; i < gameArray.length; i++) {
-  gameDescriptionInCard.textContent = gameArray[i];
-}
-// Loop end
-
 // Function for making the title in the card dynamic.
 const makeCard = (element) => {
   // Randomly select a game out of the array
   const randomIndex = Math.floor(Math.random() * gameArray.length);
   const randomGame = gameArray[randomIndex];
 
+  // // Create the div, meant to replace the current div in the html.
+  // const gameContentInCard = document.createElement("div");
+  // gameContentInCard.classList.add("game-card");
+  // Turns out it was not needed.
+
   // First part, changing the default title text of the card
-  element.textContent = randomGame.title;
+  const cardTitle = document.createElement("h2");
+  cardTitle.classList.add("title");
+  cardTitle.textContent = randomGame.title;
 
   // Add the other details and info.
   const cardYearRelease = document.createElement("p");
@@ -109,13 +109,21 @@ const makeCard = (element) => {
   cardDescription.textContent = randomGame.description;
 
   // Append
-  element.append(
+  element.replaceChildren(
+    cardTitle,
     cardYearRelease,
     cardGenreInfo,
     cardMultiplayerBoolean,
     cardImage,
     cardDescription,
   );
+
+  // element.replaceChildren(gameContentInCard);
+
+  // if (!randomGame.description.includes(gameArray.description)) {
+  //   makeCard(gameArray.description);
+  //   console.log(randomGame.description);
+  // }
 };
 
 // The function that changes the title template string
@@ -124,7 +132,7 @@ const makeCard = (element) => {
 const gameButton = document.querySelector("#game-chooser");
 gameButton.addEventListener("click", () => {
   console.log("Button clicked!");
-  makeCard(titleDefaultString);
+  makeCard(gameCard);
 });
 
-console.log(titleDefaultString);
+console.log(gameCard);

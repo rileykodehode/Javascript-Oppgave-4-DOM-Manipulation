@@ -82,8 +82,8 @@ div {
 }
 
 #randomizer-section {
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-flow: column;
 }
 
 .game-thumbnail {
